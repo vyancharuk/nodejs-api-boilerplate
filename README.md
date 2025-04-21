@@ -4,23 +4,31 @@
   <img height="300" src="./llm-codegen/LLMCodegenLogo.png?raw=true" alt="LLM-Powered Node.js CRUD API template"></a>
 </p>
 
-![node](https://img.shields.io/badge/node-v14.21.3--v20.15.1-brightgreen) ![npm](https://img.shields.io/badge/npm-v6.14.18-blue) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com/)
+![node](https://img.shields.io/badge/node-v14.21.3--v20.15.1-brightgreen) ![npm](https://img.shields.io/badge/npm-v6.14.18-blue) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/firstcontributions/first-contributions#first-contributions)
 
 ## Description
 An LLM-powered code generation tool that relies on the built-in [Node.js API Typescript Template Project](#nodejs-api-typescript-template-project) to easily generate clean, well-structured CRUD module code from text description.
 
 
 ### Prerequisites
-Before you proceed, verify that Node.js and npm are installed, and update your `.env` file with a valid LLM provider API key (e.g., `OPENAI_API_KEY`). You may choose from providers like OpenAI, Claude, DeepSeek, or OpenRouter/Llama.
+Before you start, make sure Node.js and npm are installed and obtain a valid LLM provider API key (e.g., `OPENAI_API_KEY`). You may choose from providers like OpenAI, Claude, DeepSeek, or OpenRouter/Llama. It can be passed as an environment variable or added to your `.env` file. The `env.example `file lists all supported environment variables.
 
 ### How it works?
-It orchestrates 3 LLM micro-agents (`Developer`, `Troubleshooter` and `TestsFixer`) to generate code, fix compilation errors, and ensure passing E2E tests. The process includes module code generation, DB migration creation, seeding data, and running tests to validate output. By cycling through these steps, it guarantees consistent and production-ready CRUD code aligned with vertical slicing architecture. It uses OpenAI/Anthropic/DeepSeek/Llama LLM API to perform code-generation
+It orchestrates 3 LLM micro-agents (`Developer`, `Troubleshooter` and `TestsFixer`) to generate code, fix compilation errors, and ensure passing E2E tests. The process includes module code generation, DB migration creation, seeding data, and running tests to validate output. By cycling through these steps, it guarantees consistent and production-ready CRUD code aligned with vertical slicing architecture. It uses `OpenAI/Anthropic/DeepSeek/Llama` LLM API to perform code-generation
 
 ### How to run?
-First, navigate to the root `./llm-codegen` folder and run `npm install` to install dependencies. Then execute `npm run start` and provide the requested module description when prompted. Finally, after the code generation finishes, review the output, and if the output meets your expectations, begin integrating it into your codebase
+First, navigate to the root `./llm-codegen` folder and run `npm install` to install dependencies. Then execute `npm run start` and provide the requested module description when prompted.
+
+```shell
+cd ./llm-codegen && npm i && npm run start
+```
+
+Finally, after the code generation finishes, review the output, and if the output meets your expectations, begin integrating it into your codebase
 
 
 ![LLMCodegenDemo](./llm-codegen/LLMCodegenDemo.gif)
+
+The new module’s code is generated from the following Node.js API boilerplate ⬇️
 
 ---
 

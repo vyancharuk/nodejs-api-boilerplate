@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-todo-api-boilerplate",
+  "name": "nodejs-api-boilerplate",
   "version": "1.0.0",
   "description": "Node.js and TypeScript REST API boilerplate",
   "main": "index.js",

@@ -1,3 +1,7 @@
+
+// make sure JWT_SECRET is not empty
+process.env.JWT_SECRET = process.env.JWT_SECRET || 'test-jwt-secret-key';
+
 module.exports = {
   roots: ['<rootDir>/src'],
   testMatch: [

@@ -51,7 +51,7 @@ export class BaseAgent {
       logger.info(
         `${this.constructor.name.toLowerCase()}:using OpenAI LLM`
       );
-    } else if (process.env.CLAUDE_API_KEY) {
+    } else if (process.env.ANTHROPIC_API_KEY) {
       this.llmClient = new AnthropicLLMClient();
       logger.info(
         `${this.constructor.name.toLowerCase()}:using Anthropic LLM`

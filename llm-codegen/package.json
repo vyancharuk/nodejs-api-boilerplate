@@ -10,10 +10,11 @@
     "nodejs",
     "typescript",
     "boilerplate",
-    "express.js",
+    "codegen",
     "LLM",
     "openai",
-    "claude"
+    "claude",
+    "deepseek"
   ],
   "author": "v.yancharuk@gmail.com",
   "license": "MIT",
@@ -23,11 +24,15 @@
     "openai": "^4.68.0",
     "ora": "^5.4.1",
     "pluralize": "^8.0.0",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "winston": "^3.13.0",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/node": "^22.7.6",
     "@types/readline-sync": "^1.4.8",
+    "@types/winston": "^2.4.4",
+    "@types/yargs": "^17.0.33",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }

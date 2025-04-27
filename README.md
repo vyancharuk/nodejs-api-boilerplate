@@ -11,16 +11,17 @@ An LLM-powered code generation tool that relies on the built-in [Node.js API Typ
 
 
 ### Prerequisites
-Before you start, make sure Node.js and npm are installed and obtain a valid LLM provider API key (e.g., `OPENAI_API_KEY`). You may choose from providers like OpenAI, Claude, DeepSeek, or OpenRouter/Llama. It can be passed as an environment variable or added to your `.env` file. The `env.example `file lists all supported environment variables.
+Before you start, make sure Node.js and npm are installed and obtain a valid LLM provider API key. You may choose from providers like OpenAI, Claude, DeepSeek, or OpenRouter/Llama. It can be passed as an environment variable (e.g., `OPENAI_API_KEY`) or added to your `.env` file. The `env.example` file lists all supported environment variables.
 
 ### How it works?
 It orchestrates 3 LLM micro-agents (`Developer`, `Troubleshooter` and `TestsFixer`) to generate code, fix compilation errors, and ensure passing E2E tests. The process includes module code generation, DB migration creation, seeding data, and running tests to validate output. By cycling through these steps, it guarantees consistent and production-ready CRUD code aligned with vertical slicing architecture. It uses `OpenAI/Anthropic/DeepSeek/Llama` LLM API to perform code-generation
 
 ### How to run?
-First, navigate to the root `./llm-codegen` folder and run `npm install` to install dependencies. Then execute `npm run start` and provide the requested module description when prompted.
+First, run `npm i` in the project root to install all the template’s dependencies.
+Then, navigate to the root `./llm-codegen` folder and run `npm install` to install codegen dependencies. Then execute `npm run start` and provide the requested module description when prompted.
 
 ```shell
-cd ./llm-codegen && npm i && npm run start
+cd ./llm-codegen && npm i && npm run start -- --name="orders" --description="The module responsible for the orders management. It must provide CRUD operations for handling customer orders. Users can create new orders, read order details, update order statuses or information, and delete orders that are canceled or completed."
 ```
 
 Finally, after the code generation finishes, review the output, and if the output meets your expectations, begin integrating it into your codebase

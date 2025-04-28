@@ -21,7 +21,12 @@ First, run `npm i` in the project root to install all the template’s dependenc
 Then, navigate to the root `./llm-codegen` folder and run `npm install` to install codegen dependencies. Then execute `npm run start` and provide the requested module description when prompted.
 
 ```shell
-cd ./llm-codegen && npm i && npm run start -- --name="orders" --description="The module responsible for the orders management. It must provide CRUD operations for handling customer orders. Users can create new orders, read order details, update order statuses or information, and delete orders that are canceled or completed."
+npm i && cd ./llm-codegen && npm i && \
+  npm run start -- --name "orders" \
+    --description "The module responsible for the orders management. " \
+      "It must provide CRUD operations for handling customer orders. " \
+      "Users can create new orders, read order details, update order statuses or information, " \
+      "and delete orders that are canceled or completed."
 ```
 
 Finally, after the code generation finishes, review the output, and if the output meets your expectations, begin integrating it into your codebase

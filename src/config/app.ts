@@ -2,8 +2,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
-const { NODE_ENV } = process.env;
+const { NODE_ENV = 'dev' } = process.env;
 
 const envPath =
   NODE_ENV === 'test'

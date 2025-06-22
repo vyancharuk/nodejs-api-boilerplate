@@ -6,8 +6,8 @@ import { delay } from '../utils';
 import { BaseLLMClient } from './baseLLMClient';
 
 const OPEN_ROUTER_APP_NAME = 'LLM-CODEGEN-NODEJS-BOILERPLATE-VY';
-const OPEN_ROUTER_LLAMA_405B_MODEL_ID =
-  'nousresearch/hermes-3-llama-3.1-405b:free';
+const OPEN_ROUTER_LLAMA_8B_MODEL_ID =
+  'nousresearch/deephermes-3-llama-3-8b-preview:free'
 
 /**
  * @class OpenRouterLLMClient
@@ -39,7 +39,7 @@ export class OpenRouterLLMClient extends BaseLLMClient {
   ): Promise<{ content: string; inputTokens?: number; outputTokens?: number }> {
     try {
       const completion = await this.openai.chat.completions.create({
-        model: OPEN_ROUTER_LLAMA_405B_MODEL_ID,
+        model: OPEN_ROUTER_LLAMA_8B_MODEL_ID,
         messages: [
           {
             role: 'user',

@@ -11,7 +11,7 @@ An LLM-powered code generation tool that relies on the built-in [Node.js API Typ
 
 
 ### Prerequisites
-Before you start, make sure Node.js and npm are installed and obtain a valid LLM provider API key. You may choose from providers like OpenAI, Claude, DeepSeek, or OpenRouter/Llama. It can be passed as an environment variable (e.g., `OPENAI_API_KEY`) or added to your `.env` file. The `env.example` file lists all supported environment variables.
+Before you start, make sure Node.js and npm are installed and obtain a valid LLM provider API key. You may choose from providers like OpenAI, Claude, DeepSeek, or OpenRouter/Llama ([free to use](https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free/api)). It can be passed as an environment variable (e.g. `OPENAI_API_KEY`/`OPEN_ROUTER_API_KEY`) or added to your `.env` file. The [`.env.sample`](./llm-codegen/.env.sample) file lists all supported environment variables.
 
 ### How it works?
 It orchestrates 3 LLM micro-agents (`Developer`, `Troubleshooter` and `TestsFixer`) to generate code, fix compilation errors, and ensure passing E2E tests. The process includes module code generation, DB migration creation, seeding data, and running tests to validate output. By cycling through these steps, it guarantees consistent and production-ready CRUD code aligned with vertical slicing architecture. It uses `OpenAI/Anthropic/DeepSeek/Llama` LLM API to perform code-generation

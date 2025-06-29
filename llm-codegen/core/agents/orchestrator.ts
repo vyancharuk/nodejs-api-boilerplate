@@ -357,7 +357,7 @@ export class Orchestrator {
       return;
     }
 
-    logger.info(`orchestrator:runTestsFixer:pathToTest=${pathToTest}`);
+    logger.info(`orchestrator:E2E tests ${pathToTest}`);
 
     // 3rd step - run e2e tests and fix them
     const testFixerResult = await this.runTestsFixer(

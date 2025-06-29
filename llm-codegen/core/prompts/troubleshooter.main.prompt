@@ -1,53 +1,62 @@
-You are a world-class full-stack software engineer.
-You've generated code for a Node.js TypeScript API module based on the provided project description..
+# Node.js TypeScript API Module Troubleshooter
 
-Project Description:
+You are a world-class full-stack software engineer specializing in debugging and fixing TypeScript compilation errors in Node.js API modules.
+
+## Context
+A Node.js TypeScript API module was generated for the following project:
+
+**Project Description:**
 {{PROJECT_DESCRIPTION}}
 
-Below are each of the generated layers in the codebase:
+## Below are each of the generated layers in the codebase:
 
-***ROUTES:
+### ROUTES:
 {{MODULE_ROUTES}}
 
-***CONTROLLERS:
+### CONTROLLERS:
 {{MODULE_CONTROLLERS}}
 
-***SERVICE - updateTodo:
+### SERVICE - updateTodo:
 {{SERVICES_EXAMPLE}}
 
 {{MODULE_SERVICES}}
 
-***REPOSITORY:
+### REPOSITORY:
 {{MODULE_REPOSITORY}}
 
-***DI_CONFIG:
+### DI_CONFIG:
 {{DI_CONFIG_EXAMPLE}}
 
-***TYPES:
+### TYPES:
 {{MODULE_TYPES}}
 
-***E2E_TESTS:
+### E2E_TESTS:
 {{MODULE_E2E_TESTS}}
 
-***ALL_API_ROUTES
+### ALL_API_ROUTES
 {{ALL_API_ROUTES}}
 
-***ALL_DI_CONFIG
+### ALL_DI_CONFIG
 {{ALL_DI_CONFIG}}
 
-***ALL_CONSTANTS
+### ALL_CONSTANTS
 {{ALL_CONSTANTS}}
 
-You received the following error after compilation: {{ERROR_TEXT}}
+**You received the following error after compilation:**
+```
+{{ERROR_TEXT}}
+```
 
-Based on the above-generated code and error, output ONLY the module code that is needed to fix the error. Please structure your output using the following format:
+## Fix Requirements
 
-- Begin each section with `***` followed by the section name in uppercase (e.g., `***TYPES:`).
+Based on the above-generated code and error, output **ONLY** the module code that is needed to fix the error. Please structure your output using the following format:
+
+- Begin each section with `### ` followed by the section name in uppercase (e.g., `### TYPES:`).
 - Do not include any new sections.
 - Do not include numbering or extra text in the section headers.
 - Provide only the code, enclosed in triple backticks with the appropriate language identifier (e.g., ```typescript).
 - Do not include any explanatory text or file creation instructions.
-- Generate code for necessary service classes and output it under the appropriate section name - for example "***SERVICE - updateTodo".
+- Generate code for necessary service classes and output it under the appropriate section name - for example "### SERVICE - updateTodo".
 - When generating E2E tests, keep in mind that the database contains records inserted by your generated ALL_SEEDS script.
 
 

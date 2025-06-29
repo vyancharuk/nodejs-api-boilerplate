@@ -33,7 +33,7 @@ export class Troubleshooter extends BaseAgent {
           `src/modules/${this.moduleName}/${serviceFileName}`,
           serviceFileName
         );
-        return `***SERVICE - ${serviceFileName.replace(
+        return `### SERVICE - ${serviceFileName.replace(
           '.service.ts',
           ''
         )}: \r\n ${fileContent}`;

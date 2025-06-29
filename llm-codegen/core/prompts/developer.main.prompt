@@ -1,52 +1,55 @@
-You are a world-class full-stack software engineer.
-You are to generate code for a Node.js TypeScript API module based on the provided project description.
+# Node.js TypeScript API Module Generator
 
-Project Description:
+You are a world-class full-stack software engineer. Generate a complete Node.js TypeScript API module following the established patterns and architecture.
+
+## Project Requirements:
 {{PROJECT_DESCRIPTION}}
 
-Below are examples of how each layer is structured in our codebase.
+## Below are examples of how each layer is structured in our codebase.
 
-***ROUTES:
+### ROUTES:
 {{ROUTES_EXAMPLE}}
 
-***CONTROLLERS:
+### CONTROLLERS:
 {{CONTROLLERS_EXAMPLE}}
 
 {{SERVICES_EXAMPLE}}
 
-***REPOSITORY:
+### REPOSITORY:
 {{REPOSITORY_EXAMPLE}}
 
-***DI_CONFIG:
+### DI_CONFIG:
 {{DI_CONFIG_EXAMPLE}}
 
-***TYPES:
+### TYPES:
 {{TYPES_EXAMPLE}}
 
-***E2E_TESTS:
+### E2E_TESTS:
 {{E2E_TESTS_EXAMPLE}}
 
-***MIGRATIONS:
+### MIGRATIONS:
 {{MIGRATIONS_EXAMPLE}}
 
-You also need to output the updated apiRoutes file (***ALL_API_ROUTES) that includes routes initialization for the newly added module
+## Output Requirements:
 
-***ALL_API_ROUTES
+You also need to output the updated apiRoutes file (### ALL_API_ROUTES) that includes routes initialization for the newly added module
+
+### ALL_API_ROUTES
 {{ALL_API_ROUTES}}
 
-You also need to output the updated dependency injection file (***ALL_DI_CONFIG) that ONLY adds the bindings constants for all newly added code
+You also need to output the updated dependency injection file (### ALL_DI_CONFIG) that ONLY adds the bindings constants for all newly added code
 
-***ALL_DI_CONFIG
+### ALL_DI_CONFIG
 {{ALL_DI_CONFIG}}
 
-You also need to output the updated constants file (***ALL_CONSTANTS) that ONLY adds constants for all newly added code
+You also need to output the updated constants file (### ALL_CONSTANTS) that ONLY adds constants for all newly added code
 
-***ALL_CONSTANTS
+### ALL_CONSTANTS
 {{ALL_CONSTANTS}}
 
-You also need to output extended DB seeds (***ALL_SEEDS) that include meaningful seed data for the new module. Ensure that all properties and attributes are realistic and contextually relevant to accurately represent real-world scenarios
+You also need to output extended DB seeds (### ALL_SEEDS) that include meaningful seed data for the new module. Ensure that all properties and attributes are realistic and contextually relevant to accurately represent real-world scenarios
 
-***ALL_SEEDS
+### ALL_SEEDS
 {{ALL_SEEDS}}
 
 Based on the above examples, generate the corresponding code for the new module. Please structure your output using the following format:
@@ -55,12 +58,12 @@ Based on the above examples, generate the corresponding code for the new module.
 
 - The generated code must follow the same structure and implementation patterns as in the provided examples.
 - Output code for each section: ROUTES, CONTROLLERS, REPOSITORY, DI_CONFIG, TYPES, E2E_TESTS, MIGRATIONS, each SERVICE, ALL_API_ROUTES, ALL_CONSTANTS and ALL_DI_CONFIG, and do not add any new sections.
-- Begin each section with `***` followed by the section name in uppercase (e.g., `***TYPES:`).
+- Begin each section with `### ` followed by the section name in uppercase (e.g., `### TYPES:`).
 - Do not include numbering or extra text in section headers.
 - Provide only the code enclosed in triple backticks with the appropriate language identifier (e.g., ```typescript).
 - Do not include any explanatory text or file creation instructions.
 - When designing database entities, use simple and straightforward attributes that directly represent the real-world entity.
-- Generate code for all necessary service classes and output it under the appropriate section name - for example "***SERVICE - updateTodo".
+- Generate code for all necessary service classes and output it under the appropriate section name - for example "### SERVICE - updateTodo".
 - When generating service input validation, use string types for date fields to allow dates to be passed as strings.
 - When generating seeds for ALL_SEEDS, keep the existing code in it and just add new seeds to it.
 - When generating E2E tests, ensure that the number of records used in your tests matches the number of records inserted by your generated ALL_SEEDS script to maintain consistency. 

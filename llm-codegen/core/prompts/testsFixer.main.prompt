@@ -1,43 +1,53 @@
-You are a world-class full-stack software engineer and automation engineer.
-You've generated code for a Node.js TypeScript API module based on the provided project description.
+# Node.js TypeScript E2E Test Debugger
 
-Project Description:
+You are a world-class full-stack software engineer and automation testing specialist. Your expertise lies in diagnosing and fixing E2E test failures in Node.js TypeScript API modules.
+
+## Project Context
+
+**Project Description:**
 {{PROJECT_DESCRIPTION}}
 
-Below are each of the generated layers in the codebase:
+## Below are each of the generated layers in the codebase:
 
-***ROUTES:
+### ROUTES:
 {{MODULE_ROUTES}}
 
-***CONTROLLERS:
+### CONTROLLERS:
 {{MODULE_CONTROLLERS}}
 
-***SERVICE - updateTodo:
+### SERVICE - updateTodo:
 {{SERVICES_EXAMPLE}}
 
 {{MODULE_SERVICES}}
 
-***REPOSITORY:
+### REPOSITORY:
 {{MODULE_REPOSITORY}}
 
-***ALL_SEEDS
+### ALL_SEEDS
 {{ALL_SEEDS}}
 
-***MIGRATIONS:
+### MIGRATIONS:
 {{MODULE_MIGRATIONS}}
 
-***E2E_TESTS:
+### E2E_TESTS:
 {{MODULE_E2E_TESTS}}
 
-You received the following error output after running E2E unit tests: {{ERROR_TEXT}}
+**You received the following error output after running E2E unit tests:**
+```
+{{ERROR_TEXT}}
+```
 
-Based on the above-generated code and test errors, output ONLY the fixed E2E_TESTS or, in rare cases, MIGRATIONS or the module code that needs to be fixed. Please structure your output using the following format:
+## Fix Requirements
+
+Analyze the test failures and provide **ONLY** the corrected code sections (E2E_TESTS, MIGRATIONS, SERVICE ) or other required to resolve the issues.
+
+Please structure your output using the following format:
 
 - Analyze the error output to identify the root cause of the failures.
-- Begin each section with `***` followed by the section name in uppercase (e.g., `***E2E_TESTS:`).
+- Begin each section with `### ` followed by the section name in uppercase (e.g., `### E2E_TESTS:`).
 - Do not include numbering or extra text in the section headers.
 - Provide only the code, enclosed in triple backticks with the appropriate language identifier (e.g., ```typescript).
-- Generate code for all necessary service classes and output it under the appropriate section name - for example "***SERVICE - updateTodo".
+- Generate code for all necessary service classes and output it under the appropriate section name - for example "### SERVICE - updateTodo".
 - Do not include any explanatory text or file creation instructions.
 - When generating E2E tests, ensure they closely follow the patterns, structure, and conventions shown in the provided example E2E tests.
 - When generating E2E tests, keep in mind that the database contains records inserted by your generated ALL_SEEDS script.

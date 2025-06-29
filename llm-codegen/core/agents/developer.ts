@@ -35,7 +35,7 @@ export class Developer extends BaseAgent {
       ].map(async (serviceFilePath) => {
         const fileContent = await this.loadSourceFile(serviceFilePath);
         const serviceFileName = path.basename(serviceFilePath);
-        return `***SERVICE: - ${serviceFileName.replace(
+        return `### SERVICE: - ${serviceFileName.replace(
           '.service.ts',
           ''
         )}: \r\n ${fileContent}`;

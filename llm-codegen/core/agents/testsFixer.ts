@@ -51,7 +51,7 @@ export class TestsFixer extends BaseAgent {
           serviceFileName
         );
 
-        return `***SERVICE - ${serviceFileName.replace(
+        return `### SERVICE - ${serviceFileName.replace(
           '.service.ts',
           ''
         )}: \r\n ${fileContent}`;

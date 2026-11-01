@@ -86,7 +86,7 @@
     "shortid": "^2.2.15",
     "sqlite3": "^5.1.7",
     "to-readable-stream": "^4.0.0",
-    "uuid": "^10.0.0",
+    "uuid": "^14.0.0",
     "winston": "^3.13.0",
     "zod": "^3.23.8",
     "zod-validation-error": "^3.4.0"
